@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio v.2</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="script.js" />
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav>
+      <div class="navbar">
+        <div class="logo">
+          <a href="#">afr<span>izal.</span></a>
+        </div>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Skills</a></li>
+          <li><a href="#">Work</a></li>
+          <li><a href="#">contact</a></li>
+        </ul>
+
+        <div id="toggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <script>
+          const toggle = document.getElementById("toggle");
+          toggle.onclick = function () {
+            toggle.classList.toggle("active");
+          };
+        </script>
+      </div>
+    </nav>
+    <!-- Akhir Navbar -->
+
+    <!-- Jumbotron -->
+    <section class="jumbotron">
+      <div class="foto">
+        <img src="img/fh2a.png" alt="my-foto" />
+
+        <div class="jumbotron-content">
+          <div class="text-1">Hi, my name is</div>
+          <div class="text-2">Afrizal Setya</div>
+          <div class="text-3">And I'm a <span>Student</span></div>
+
+          <a class="click" href="#">Click Me</a>
+          <div class="icon">
+            <ul>
+              <li>
+                <a href="#"><img src="img/icon/facebook.png" alt="" /></a>
+              </li>
+              <li>
+                <a href="#"><img src="img/icon/github.png" alt="" /></a>
+              </li>
+              <li>
+                <a href="#"><img src="img/icon/linkedin.png" alt="" /></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Akhir Jumbotron -->
+
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta, nisi numquam vel quia animi totam obcaecati nulla sequi. Eveniet omnis fuga quis aperiam praesentium! Quidem autem ullam eos, architecto quisquam voluptates! Repellendus
+      officiis asperiores perferendis doloremque itaque exercitationem voluptates incidunt, totam cum necessitatibus deleniti vitae? Ipsum itaque aperiam placeat necessitatibus!
+    </p>
+  </body>
+  <script type="text/javascript">
+    window.addEventListener("scroll", function () {
+      var nav = document.querySelector("nav");
+      nav.classList.toggle("sticky", window.scrollY > 0);
+    });
+
+    $(document).ready(function () {
+      $("#toggle").click(function () {
+        $(".navbar ul").toggleClass("active");
+      });
+    });
+  </script>
+</html>

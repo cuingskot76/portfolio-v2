@@ -1,0 +1,367 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@500;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  font-family: "Ubuntu", sans-serif;
+  color: #163146;
+  overflow-x: hidden;
+  /* height: 1080px; */
+}
+
+/* NAVBAR */
+/* nav {
+  position: fixed;
+  width: 100%;
+  padding: 20px;
+  z-index: 2;
+} */
+
+nav {
+  position: fixed;
+  width: 100%;
+  z-index: 999;
+  padding: 20px 0;
+  font-family: "Ubuntu", sans-serif;
+  transition: all 0.5s;
+}
+
+nav.sticky {
+  padding: 15px 0;
+  background: #db143c;
+}
+
+nav.sticky .logo span {
+  color: #163146;
+}
+
+nav.sticky ul li a:hover {
+  color: white;
+  border-bottom: white 2px solid;
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.logo a {
+  font-size: 2rem;
+  color: #163146;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 600;
+}
+
+.logo span {
+  color: rgb(250, 60, 98);
+}
+.navbar ul {
+  display: flex;
+}
+
+.navbar ul li a {
+  color: #163146;
+  margin-left: 25px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.navbar ul li a:hover {
+  color: crimson;
+}
+
+/* HAMBURGER MENU */
+#toggle {
+  display: none;
+  flex-direction: column;
+  height: 20px;
+  justify-content: space-between;
+
+  cursor: pointer;
+}
+
+#toggle span {
+  display: block;
+  width: 28px;
+  height: 3px;
+  background-color: #163146;
+  border-radius: 3px;
+  transition: all 0.5s;
+}
+
+#toggle span:nth-child(1) {
+  transform-origin: 0 0;
+}
+#toggle span:nth-child(3) {
+  transform-origin: 0 100%;
+}
+
+#toggle.active span:nth-child(1) {
+  transform: rotate(45deg) translate(-1px, -1px);
+}
+#toggle.active :nth-child(2) {
+  transform: scale(0);
+}
+#toggle.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(-1px, 0);
+}
+
+/* JUMBOTRON */
+.jumbotron {
+  /* position: relative; */
+  /* background-color: blue; */
+  display: flex;
+  min-height: 100vh;
+}
+/* 
+.jumbotron .foto {
+  background-image: url(img/fh2a.png);
+  height: 502px;
+  width: 100%;
+  background-repeat: no-repeat;
+  display: flex;
+} */
+
+.jumbotron .foto {
+  display: flex;
+  justify-content: space-between;
+  /* background-color: blue; */
+  min-width: 100vw;
+  position: relative;
+}
+
+.foto img {
+  margin-top: 5rem;
+}
+
+.jumbotron .jumbotron-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-right: 10rem;
+  /* width: 50vw; */
+  /* background-color: yellowgreen; */
+}
+
+.jumbotron-content .text-1 {
+  font-size: 27px;
+}
+.jumbotron-content .text-2 {
+  font-size: 75px;
+  font-weight: 600;
+}
+.jumbotron-content .text-3 {
+  font-size: 40px;
+}
+
+.jumbotron-content .text-3 span {
+  font-weight: 500;
+  color: crimson;
+}
+
+.jumbotron-content a.click {
+  align-items: center;
+  text-align: center;
+  /* background-color: red; */
+  width: 125px;
+  padding: 10px;
+  margin: 20px 0;
+  color: white;
+  background-color: crimson;
+  border-radius: 5px;
+  border: 2px solid crimson;
+  transition: all 0.3s;
+  z-index: 9;
+}
+
+.jumbotron-content a:hover {
+  background-color: white;
+  color: crimson;
+}
+
+.icon {
+  /* position: relative; */
+  display: flex;
+  margin-top: -50px;
+  /* background-color: red; */
+}
+
+.icon ul {
+  display: flex;
+  flex-direction: row;
+}
+
+.icon ul li {
+  /* background-color: blue; */
+  padding-right: 30px;
+}
+
+.icon ul li img {
+  /* transform: scale(0.5); */
+  /* padding-right: 30px; */
+  /* border-radius: 50%; */
+  /* background-color: red; */
+}
+
+.icon ul li img:hover {
+  /* background-color: #3b5998; */
+}
+
+/* RESPONSIVE */
+/* UKURAN TABLET */
+@media screen and (max-width: 768px) {
+  /* nav {
+    background-color: blue;
+    z-index: 9999;
+  } */
+
+  .navbar ul {
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.7);
+    height: 60vh;
+    width: 100%;
+    top: -100%;
+    left: 0;
+    margin-top: 67px;
+    /* padding-top: 40px; */
+    justify-content: space-evenly;
+    text-align: center;
+    flex-direction: column;
+    transition: all 0.5s;
+    /* z-index: -999; */
+    /* transform: translateY(100%); */
+  }
+
+  .navbar ul.active {
+    top: 0;
+  }
+
+  .navbar ul li {
+    display: block;
+  }
+  .navbar ul li a {
+    color: white;
+    display: inline-block;
+    margin: 20px 0;
+    font-size: 20px;
+    /* z-index: 999; */
+  }
+
+  #toggle {
+    display: flex;
+    z-index: 999;
+    /* background-color: red; */
+  }
+  #toggle.active span {
+    background-color: black;
+    /* align-items: center; */
+    justify-content: center;
+    text-align: center;
+  }
+
+  .jumbotron {
+    position: relative;
+  }
+
+  .jumbotron .foto {
+    /* display: flex; */
+    /* justify-content: space-between; */
+    /* background-color: blue; */
+    /* width: 100vh; */
+    /* position: relative; */
+  }
+
+  .foto img {
+    margin-top: 1rem;
+    transform: scale(0.6);
+    margin-left: -70px;
+  }
+
+  .jumbotron-content {
+    position: absolute;
+    right: -5rem;
+    top: 10rem;
+    display: flex;
+    /* background-color: red; */
+    /* min-width: 100vw; */
+  }
+  .jumbotron-content .text-1 {
+    font-size: 20px;
+  }
+  .jumbotron-content .text-2 {
+    font-size: 50px;
+    font-weight: 500;
+  }
+  .jumbotron-content .text-3 {
+    font-size: 30px;
+  }
+
+  .jumbotron-content .text-3 span {
+    font-weight: 400;
+    color: crimson;
+  }
+
+  .icon {
+    margin-top: 20px;
+    margin-left: -10px;
+    /* background-color: red; */
+  }
+
+  .icon ul li {
+    padding-right: 10px;
+    /* background-color: blue; */
+  }
+
+  .icon ul li img {
+    margin: 10px;
+    transform: scale(0.9);
+  }
+}
+
+/* UKURAN MOBILE */
+@media screen and (max-width: 576px) {
+  .foto img {
+    position: absolute;
+    /* margin: 150px; */
+    right: 0;
+    bottom: -5rem;
+    transform: scale(0.6);
+  }
+
+  .jumbotron {
+    position: relative;
+    display: flex;
+    min-height: 100vh;
+  }
+
+  .jumbotron-content {
+    /* position: absolute; */
+    /* display: inherit; */
+    /* right: 0; */
+    /* top: 0; */
+    /* display: flex; */
+    position: absolute;
+    height: 100%;
+    top: -7rem;
+    left: 1rem;
+    justify-content: left;
+    /* margin-right: 0; */
+    /* right: -5rem;
+    top: 10rem; */
+    /* display: flex; */
+    /* flex-direction: column; */
+    /* justify-content: center; */
+    /* margin-right: 10rem; */
+    /* background-color: red; */
+    /* min-width: 100vw; */
+  }
+
+  .icon {
+    display: none;
+  }
+}
